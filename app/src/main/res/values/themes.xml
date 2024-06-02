@@ -1,0 +1,16 @@
+<resources xmlns:tools="http://schemas.android.com/tools">
+    <!-- Base application theme. -->
+    <style name="Base.Theme.ChatApp" parent="Theme.Material3.DayNight.NoActionBar">
+        <!-- Customize your light theme here. -->
+        <!-- <item name="colorPrimary">@color/my_light_primary</item> -->
+    </style>
+
+    <style name="Theme.ChatApp" parent="Base.Theme.ChatApp">
+        <item name="android:windowTranslucentStatus">false</item>
+        <item name="android:windowTranslucentNavigation">false</item>
+    </style>
+
+    <style name="AppTheme.AppBarOverlay" parent="AppTheme.AppBarOverlay" tools:ignore="ResourceCycle" />
+
+    <style name="AppTheme.PopUpOverlay" parent="AppTheme.PopUpOverlay" tools:ignore="ResourceCycle" />
+</resources>

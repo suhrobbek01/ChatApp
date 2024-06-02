@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical">
+
+    <RelativeLayout
+        android:id="@+id/layout1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center_vertical"
+        android:orientation="horizontal"
+        android:padding="5dp">
+
+        <de.hdodenhof.circleimageview.CircleImageView
+            android:id="@+id/profile_image"
+            android:layout_width="@dimen/_50sdp"
+            android:layout_height="@dimen/_50sdp"
+            android:src="@drawable/ic_profile" />
+
+        <TextView
+            android:id="@+id/username"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentEnd="true"
+            android:layout_marginStart="@dimen/_12sdp"
+            android:layout_marginEnd="@dimen/_10sdp"
+            android:layout_toEndOf="@id/profile_image"
+            android:ellipsize="end"
+            android:maxLines="1"
+            android:text="@string/user_name"
+            android:textSize="@dimen/_16ssp" />
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/unreadMessageCard"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:layout_gravity="end|center_vertical"
+            android:layout_marginStart="150dp"
+            android:visibility="gone"
+            app:cardBackgroundColor="#0AA0C5"
+            app:cardCornerRadius="15dp">
+
+            <TextView
+                android:id="@+id/count_unreadMessages"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:text="@string/_1"
+                android:textColor="@color/white" />
+        </androidx.cardview.widget.CardView>
+
+        <de.hdodenhof.circleimageview.CircleImageView
+            android:id="@+id/image_online"
+            android:layout_width="@dimen/_18sdp"
+            android:layout_height="@dimen/_18sdp"
+            android:layout_below="@id/username"
+            android:layout_marginStart="-16dp"
+            android:layout_marginTop="@dimen/_12sdp"
+            android:layout_toEndOf="@+id/profile_image"
+            android:src="@drawable/ic_profile"
+            android:visibility="visible"
+            app:civ_border_color="#05df29"
+            app:civ_border_width="@dimen/_12sdp" />
+
+        <de.hdodenhof.circleimageview.CircleImageView
+            android:id="@+id/image_offline"
+            android:layout_width="@dimen/_18sdp"
+            android:layout_height="@dimen/_18sdp"
+            android:layout_below="@id/username"
+            android:layout_marginStart="-16dp"
+            android:layout_marginTop="@dimen/_12sdp"
+            android:layout_toEndOf="@id/profile_image"
+            android:src="@drawable/ic_profile"
+            android:visibility="gone"
+            app:civ_border_color="#bfbfbf"
+            app:civ_border_width="@dimen/_12sdp" />
+
+        <TextView
+            android:id="@+id/message_last"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/username"
+            android:layout_alignParentEnd="true"
+            android:layout_marginStart="@dimen/_12sdp"
+            android:layout_marginTop="@dimen/_5sdp"
+            android:layout_marginEnd="@dimen/_10sdp"
+            android:layout_toEndOf="@id/profile_image"
+            android:maxLines="1"
+            android:padding="@dimen/_6sdp"
+            android:text="@string/sent_file"
+            android:textColor="@color/black"
+            android:textSize="@dimen/_18ssp" />
+
+    </RelativeLayout>
+
+    <LinearLayout
+        android:id="@+id/divider"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/_1sdp"
+        android:background="@color/black"
+        android:orientation="horizontal" />
+</LinearLayout>
